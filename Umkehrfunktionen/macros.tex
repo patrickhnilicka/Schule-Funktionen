@@ -1,0 +1,207 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Theorem
+\newcounter{theo}[section]
+\setcounter{theo}{0}
+\renewcommand{\thetheo}{\arabic{section}.\arabic{theo}}
+
+\newenvironment{theo}[2][]{%
+  \refstepcounter{theo}%
+  \ifstrempty{#1}{%
+    \mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=blue!50]{\strut Satz~\thetheo};}}%
+  }{%
+    \mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=blue!50]{\strut Satz~\thetheo:~#1};}}%
+  }%
+  \mdfsetup{
+    innertopmargin=10pt,
+    linecolor=blue!50,
+    linewidth=2pt,
+    topline=true,
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax,
+    nobreak=true % kein Seitenumbruch direkt vor/nach dem Rahmen
+  }%
+  \begin{mdframed}\relax
+    \begin{minipage}{\linewidth} % verhindert Seitenumbruch innerhalb
+      \label{#2}%
+      }{%
+    \end{minipage}%
+  \end{mdframed}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Lemma
+\newcounter{lem}[section]\setcounter{lem}{0}
+\renewcommand{\thelem}{\arabic{section}.\arabic{lem}}
+\newenvironment{lem}[2][]{%
+  \refstepcounter{lem}%
+  \ifstrempty{#1}%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=green!20]
+          {\strut Lemma~\thelem};}}
+  }%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=green!20]
+          {\strut Lemma~\thetheo:~#1};}}%
+  }%
+  \mdfsetup{innertopmargin=10pt,linecolor=green!20,%
+    linewidth=2pt,topline=true,%
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+  }
+  \begin{mdframed}[]\relax%
+    \label{#2}}{\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Definition
+\newcounter{deff}[section]\setcounter{deff}{0}
+\renewcommand{\thedeff}{\arabic{section}.\arabic{deff}}
+\newenvironment{deff}[2][]{%
+  \refstepcounter{deff}%
+  \ifstrempty{#1}%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=red!60]
+          {\strut Definition~\thedeff};}}
+  }%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=red!60]
+          {\strut Definition~\thedeff:~#1};}}%
+  }%
+  \mdfsetup{innertopmargin=10pt,linecolor=red!60,%
+    linewidth=2pt,topline=true,%
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+  }
+  \begin{mdframed}[]\relax%
+    \label{#2}}{\end{mdframed}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beweisumgebung anpassen:
+% Proof-Umgebung neu definieren mit fettem Titel
+\makeatletter
+\renewenvironment{proof}[1][Beweis]{%
+  \par\pushQED{\qed}%
+  \normalfont\topsep6pt \trivlist
+  \item[\hskip\labelsep \bfseries #1.]\ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+\renewcommand{\qedsymbol}{$\blacksquare$}       % Ausgefülltes Quadrat
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Example
+\newcounter{examplebox}[section]\setcounter{examplebox}{0}
+\renewcommand{\theexamplebox}{\arabic{section}.\arabic{examplebox}}
+\newenvironment{examplebox}[2][]{%
+  \refstepcounter{examplebox}%
+  \ifstrempty{#1}%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=gray!20]
+          {\strut Beispiel~\theexamplebox};}}
+  }%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=gray!20]
+          {\strut Beispiel~\theexamplebox:~#1};}}%
+  }%
+  \mdfsetup{innertopmargin=10pt,linecolor=gray!20,%
+    linewidth=2pt,topline=true,%
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+  }
+  \begin{mdframed}[]\relax%
+    \label{#2}}
+    {\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Aufgabe
+\newcounter{aufgabe}[section]\setcounter{aufgabe}{0}
+\renewcommand{\theaufgabe}{\arabic{section}.\arabic{aufgabe}}
+\newenvironment{aufgabe}{%
+  \refstepcounter{aufgabe}%
+  \vspace{0.5cm}
+  \strut \textbf{Aufgabe~\theaufgabe}\\}
+{\vspace{2cm}\\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fazit
+\newenvironment{fazit}[2][]{%
+  \ifstrempty{#1}%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=gray!20]
+          {\strut Merke};}}
+  }%
+  {\mdfsetup{%
+      frametitle={%
+          \tikz[baseline=(current bounding box.east),outer sep=0pt]
+          \node[anchor=east,rectangle,fill=gray!20]
+          {\strut #1};}}%
+  }%
+  \mdfsetup{innertopmargin=10pt,linecolor=gray!20,%
+    linewidth=2pt,topline=true,%
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+  }
+  \begin{minipage}{\textwidth}
+    \begin{mdframed}[]\relax%
+      \label{#2}}{\end{mdframed}
+  \end{minipage}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Beispiel in Absatz
+\newcounter{example}[section]\setcounter{example}{0}
+\renewcommand{\theexample}{\arabic{section}.\arabic{example}}
+\newenvironment{example}{%
+  \refstepcounter{example}%
+  \vspace{0.5cm}
+  \strut \textbf{Beispiel~\theexample}\\}
+{\mbox{\vspace{0.5cm}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\makeatletter
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+  \def\chapquote@author{#2}%
+  \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+  \itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+\newcommand\kariert[2][0.5cm]{% 
+  \begin{center}
+    \begin{tikzpicture}[gray,step=#1]
+      \pgfmathtruncatemacro\anzahl{(\linewidth-\pgflinewidth)/#1} % maximale Anzahl Kästchen pro Zeile
+      \draw (0,0) rectangle (\anzahl*#1,#2*#1) (0,0) grid (\anzahl*#1,#2*#1);
+    \end{tikzpicture}
+  \end{center}
+}
+
+%Befehle
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\D}{\mathbb{D}}
+
+% nur eine Makro-Abkürzung, kein globaler Stil
+\newcommand{\axisopts}{%
+  width=7cm,height=6cm,axis lines=middle,
+  grid=both,major grid style={draw=gray!40},minor grid style={draw=gray!20},
+  tick style={black},xtick distance=1,ytick distance=1,
+  xlabel={$x$},ylabel={$y$},
+  label style={font=\scriptsize},tick label style={font=\scriptsize},
+  samples=80}
