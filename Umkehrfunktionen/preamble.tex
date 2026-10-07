@@ -53,10 +53,10 @@
 \usepackage{setspace} % spaces between lines
 
 % listings
-\usepackage{listings} % to insert code
+\usepackage{minted} % to insert code
 
 % quotation
-\usepackage[german=swiss]{csquotes} % quoting environment
+\usepackage{csquotes} % quoting environment
 
 \usepackage{enumitem} % provides user control over the layout of the three basic list environments: enumerate, itemize and description
 
@@ -79,15 +79,14 @@
     footskip=1.5cm]{geometry} % wider text
 
 \usepackage{pgffor, ifthen}
-\usepackage{array, tabularx}
+\usepackage{array}
 \usepackage{svg}
 \usepackage{pgfplots}
 \usepackage{pgf}
-\usetikzlibrary{automata, positioning, arrows, arrows.meta, angles,quotes}
+\usetikzlibrary{automata, positioning, arrows, angles,quotes,arrows.meta,decorations.markings}
 
 \usetikzlibrary{chains,fit,shapes, calc}
-\usetikzlibrary{patterns}
-\usetikzlibrary{decorations.markings,arrows.meta}
+\usetikzlibrary{patterns, matrix}
 \usepackage{mathptmx}
 
 \usepackage{mathtools} % for ceil and floor
@@ -101,9 +100,7 @@
 \raggedbottom
 \usepackage{tabto}
 \usepackage{fancyhdr}
-\setlength{\headheight}{13.7pt} % Fix warning
-\addtolength{\topmargin}{-13.7pt} % Optional adjustment
-\pagestyle{fancy} \fancyhf{} \lhead{\small\textbf{Funktionen 1. Klassen}} \rhead{\small \textbf{SJ 26/27}}
+\pagestyle{fancy} \fancyhf{} \lhead{\small\textbf{2. Klasse}} \rhead{\small \textbf{SJ 26/27}}
 \lfoot{{\textbf{KLW}}  / P. Hnilicka\qquad }
 \rfoot{\small --\thepage --}
 \setlength{\headwidth}{17cm}
@@ -119,8 +116,8 @@
 \usepackage{mathrsfs}
 %\usepackage[version=4]{mhchem}
 \usepgfplotslibrary{fillbetween}
-\usepgfplotslibrary{groupplots}
-\DeclareMathOperator{\W}{\mathbb{W}}
-\DeclareMathOperator{\D}{\mathbb{D}}
-\DeclareMathOperator{\R}{\mathbb{R}}
-\setlist[enumerate,2]{label=\alph*)}      % 2. Ebene → a)
+\newcounter{eqn}
+\renewcommand*{\theeqn}{\alph{eqn})}
+\newcommand{\num}{\refstepcounter{eqn}\text{\theeqn}\quad}
+%Zweite Stufe von enumerate auf a) b) statt (a) (b) etc. anpassen
+\setlist[enumerate,2]{label=\alph*)}

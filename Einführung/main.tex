@@ -1,18 +1,76 @@
 \section{Was ist eine Funktion?}
-\subsection{Einführungsaufgabe}
-Sei $x=4$. Wie viele Antworten gibt es zu den folgenden Fragen?
-\begin{enumerate}[label=\alph*)]
-    \item Welche Zahl ist der Kehrwert von x?
-    \item Wie viele Teiler besitzt x?
-    \item Welche Zahl hat x Teiler?
-    \item Welche Zahl ist das Quadrat von x?
-    \item Welche Zahl ergibt x, wenn man sie quadriert?
+\subsection{Einführungsaufgaben}
+\begin{enumerate}
+    \item G. ist Weltraumschrotthändlerin. Mit ihrer Weltraumschrottwaage wiegt sie den Schrott und ordnet dem jeweiligen Gewicht einen Preis zu. Es wird also einer ersten Grösse $x$ (Gewicht) eine zweite Grösse $y$ (Preis) zugeordnet. \\
+          Man sagt auch: Der Preis hängt \emph{funktional} von dem Gewicht ab, weil jedem möglichen Gewicht des Weltraumschrotts in eindeutiger Weise ein Preis zugeordnet wird.
+          \begin{enumerate}
+              \item Was für Zahlen kommen hier für die Grösse $x$ in Frage? Und was für Zahlen für die Grösse $y$?
+              \item Was denken Sie, nach was für einer Regel oder Formel wird eigentlich der Preis aus dem Gewicht bestimmt? Wie würden Sie das als Verkäuferin oder Verkäufer tun?
+          \end{enumerate}
+    \item Nico behauptet von sich, dass er in Windeseile jede beliebige Zahl quadrieren kann.
+          Man kann ihm also einfach irgendeine Zahl $x$ nennen, und er berechnet dann daraus
+          $y$, das dem $x$ zugeordnete Quadrat. Man sagt auch: Die Zahl $y$ hängt
+          \emph{funktional} von der Zahl $x$ ab, weil jeder möglichen Zahl $x$ in eindeutiger
+          Weise ihr Quadrat zugeordnet ist.
+
+          \begin{enumerate}
+              \item Was für Zahlen kommen hier für die Grösse $x$ in Frage? Und was für Zahlen
+                    für die Grösse $y$?
+              \item Mit welcher Formel in $x$ und $y$ würden Sie die Zuordnung ausdrücken,
+                    die Nico ausführt?
+          \end{enumerate}
+    \item Martina hat einen langen, schmalen Papierstreifen vor sich. Zum Zeitvertreib faltet sie ihn ein erstes Mal mittig, dann ein zweites Mal, dann ein drittes Mal, und so weiter. Mit jeder weiteren Faltung wird der Stapel dicker und sperriger.
+
+          Irgendwann fragt sich Martina, wie eigentlich die Dicke des Stapels von der Anzahl der Faltungen abhängt. Es wird also einer ersten Grösse $x$ (Anzahl der Faltungen) eine zweite Grösse $y$ (Dicke des Stapels) zugeordnet. Man sagt auch: Die Dicke des Stapels hängt \emph{funktional} von der Anzahl der Faltungen ab, weil jeder möglichen Anzahl der Faltungen in eindeutiger Weise eine Dicke zugeordnet wird.
+
+          \begin{enumerate}
+              \item Was für Zahlen kommen hier für die Grösse $x$ in Frage? Und was für Zahlen für die Grösse $y$?
+
+              \item Was denken Sie, nach was für einer Regel oder Formel wird die Dicke des Stapels aus der Anzahl der Faltungen bestimmt? Was für Annahmen muss man hierbei zusätzlich treffen?
+          \end{enumerate}
 \end{enumerate}
+
 \newpage
 \subsection{Der Funktionsbegriff}
 \begin{deff}[Funktion]{}
     Eine \textbf{Funktion} (häufig mit $f$ bezeichnet) ist eine eindeutige Zuordnung, die jedem Element $x$ einer bestimmten Menge $\D$ (\textbf{Definitionsbereich} oder \textbf{Definitionsmenge} genannt) genau ein Element $y$ oder $f(x)$ (sprich \textit{f von x}) einer zweiten Menge $\W$ (Wertemenge genannt) zuordnet.
 \end{deff}
+\textbf{Bemerkung:} Anstelle der Buchstaben $x$ und $y$ können auch andere Buchstaben verwendet werden. Ebenso können anstelle von $f$ andere Buchstaben oder Symbole verwendet werden.
+\begin{example}
+    Lehrer H. teilt die Klasse 1z in drei Gruppen ein. Die Gruppen werden mit den Zahlen 1, 2 und 3 bezeichnet:
+    \smallskip
+
+    \begin{minipage}{0.4\textwidth}
+        \begin{tabular}{c|c}
+            Schüler & Gruppe \\
+            \hline
+            Anna    & 1      \\
+            Bert    & 2      \\
+            Clara   & 3      \\
+            David   & 1      \\
+            Elisa   & 2      \\
+            Felix   & 3
+        \end{tabular}
+    \end{minipage}
+    \begin{minipage}{0.6\textwidth}
+        Dies ist eine Zuordnung \textit{Schüler} $\mapsto$ \textit{Gruppe}. Dabei werden folgende Zuordnungen gemacht:
+
+        Anna $\mapsto$ $1$, Bert $\mapsto$ $2$, Clara $\mapsto$ $3$, David $\mapsto$ $1$, Elisa $\mapsto$ $2$, Felix $\mapsto$ $3$.
+        \vspace{0.5cm}
+
+        Wenn wir die Zuordnung $G$ nennen, so können wir schreiben: $G(\text{Anna})=1$, $G(\text{Bert})=2$, $G(\text{Clara})=3$, $G(\text{David})=1$, $G(\text{Elisa})=2$, $G(\text{Felix})=3$.
+    \end{minipage}
+\end{example}
+
+\begin{example}
+    Wenn nun die Schüler auch Nummern bekommen, so wird die Zuordnung $G$ eine Zuordnung von der Definitionsmenge $\D =\{1,2,3,4,5,6\}$ nach der Wertemenge $\W =\{1,2,3\}$. Das ergibt folgende Zuordnungen:
+    \begin{center}
+        \begin{tabular}{c c c}
+            $1 \mapsto 1$ oder $G(1)=1$ & $2 \mapsto 2$ oder $G(2)=2$ & $3 \mapsto 3$ oder $G(3)=3$ \\
+            $4 \mapsto 1$ oder $G(4)=1$ & $5 \mapsto 2$ oder $G(5)=2$ & $6 \mapsto 3$ oder $G(6)=3$
+        \end{tabular}
+    \end{center}
+\end{example}
 \subsubsection{Funktion als Maschine}
 \begin{minipage}[t]{0.6\textwidth}
     Funktionen kann man sich als eine Art Input-Output-Maschine vorstellen. Man gibt eine Zahl $x$ in die Maschine, die Zahl wird verarbeitet und schliesslich wird eine Zahl $f(x)$ herausgegeben.
@@ -25,21 +83,6 @@ Sei $x=4$. Wie viele Antworten gibt es zu den folgenden Fragen?
     \vspace{0pt}
     \includegraphics[width=\textwidth]{Einführung/im/Maschine.png}
 \end{minipage}
-\begin{example}
-    \[f(x)=x^2 \]
-    entspricht der Maschine, die eine beliebige Zahl als Input nimmt und das Quadrat des Inputs herausgibt (beispielsweise wird $y=25$ herausgegeben, wenn man $x=5$ eingibt).
-    \begin{description}
-        \item[Definitionsbereich] $\D = \R$, da jede reelle Zahl quadriert werden kann
-        \item[Wertebereich] $\W = \R^+$, da beim Quadrieren keine negativen Zahlen entstehen können
-    \end{description}
-\end{example}
-
-\begin{example}
-    Ganz wichtig in der Definition ist die Formulierung \glqq genau ein\grqq{}.
-    So ist die Zuordnung
-    \[f(x) = \text{\glqq Zahl, die x Teiler besitzt \grqq{}}\]
-    keine Funktion, da es für $x=2$ beispielsweise unendlich viele Möglichkeiten gibt - alle Primzahlen.
-\end{example}
 
 \subsubsection{Funktion als Wolkendiagramm}
 \begin{minipage}{0.6\textwidth}
@@ -150,7 +193,34 @@ Die Eindeutigkeit (\glqq genau ein\grqq{})ist dann gegeben, wenn von jedem Punkt
 
         \end{tikzpicture}}
 \end{center}
-\subsubsection{Sprech- und Schreibweisen}
+$f(x)$ darf also nicht \glqq mehrere Ergebnisse\grqq{} haben.
+\begin{example}
+    Im Beispiel der Zuordnung \textit{Schüler} $\mapsto$ \textit{Gruppe} ist die Eindeutigkeit gegeben, da jeder Schüler genau einer Gruppe zugeordnet ist. Umgekehrt dürfen aber mehrere Schüler in die gleiche Gruppe eingeteilt werden (dies entspricht dem zweiten Bild oben, wo mehrere Pfeile auf das gleiche Ziel zeigen).
+\end{example}
+
+% \begin{example}
+%     Die Definitionsmenge kann sich auch aus dem Sachzusammenhang ergeben. Falls wir pro Kilogramm Weltraum
+% \end{example}
+\subsection{Die Funktionsgleichung}
+Im Gruppenbeispiel konnten wir die Zuordnung für jedes Element der Definitionsmenge explizit angeben.
+
+In vielen Fällen ist dies aber nicht möglich, da die Definitionsmenge unendlich viele Elemente enthält. In solchen Fällen kann man eine \textbf{Funktionsgleichung} angeben, die beschreibt, wie der Output aus dem Input berechnet werden kann. Die Funktionsgleichung ist also quasi die Zuordnungsregel in Formelnform.
+
+Im Beispiel der Einführungsaufabe 2. kann man eine Rechenanweisung angeben, mit der man ausgehend vom Input den Output berechnen kann:
+\[f(x) =x^2\]
+Will beispielsweise den Output an der Stelle $x=3$ bestimmen, kann man das $x$ in der Funktionsgleichung durch die $3$ ersetzen:
+\[f(3)=3^2=9\]
+Manchmal gibt es bei einer Funktionsgleichung auch unterschiedliche Rechenanweisungen, ja nachdem in welchem Bereich der Input liegt.
+
+Dies ist zum Beispiel bei der Betragsfunktion der Fall. Anstatt mit $f(x)$ wird sie mit $|x|$ bezeichnet und ist folgendermassen definiert:
+\[
+    |x| = \begin{cases}
+        x, \quad \text{falls } x \geq 0 \\
+        -x, \quad \text{falls } x < 0
+    \end{cases}
+\]
+$x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
+\subsection{Sprech- und Schreibweisen}
 Der Begriff der Funktion ist über einen langen Zeitraum von etwa 150 Jahren entstanden. In dieser Zeit haben sich Mathematiker in verschiedenen Teilgebieten der Mathematik zwar intensiv mit Funktionen befasst, aber es gab noch keinen Überbegriff dafür. So sind unterschiedliche Sprechweisen entstanden, die das gleiche bedeuten und noch heute parallel verwendet werden:
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
@@ -181,21 +251,109 @@ Der Begriff der Funktion ist über einen langen Zeitraum von etwa 150 Jahren ent
     Am meisten verwenden wir folgende Schreibweisen:
     \[y= x^2 \text{ oder } f(x) = x^2\]
 \end{example}
-\subsubsection{Funktionsgleichung}
-Im Beispiel der Quadratfunktion kann man eine Rechenanweisung angeben, mit der man ausgehend vom Input den Output berechnen kann:
-\[f(x) =x^2\]
-Will beispielsweise den Output an der Stelle $x=3$ bestimmen, kann man das $x$ in der Funktionsgleichung durch die $3$ ersetzen:
-\[f(3)=3^2=9\]
-Manchmal gibt es bei einer Funktionsgleichung auch unterschiedliche Rechenanweisungen, ja nachdem in welchem Bereich der Input liegt.
 
-Dies ist zum Beispiel bei der Betragsfunktion der Fall. Anstatt mit $f(x)$ wird sie mit $|x|$ bezeichnet und ist folgendermassen definiert:
-\[
-    |x| = \begin{cases}
-        x, \quad \text{falls } x \geq 0 \\
-        -x, \quad \text{falls } x < 0
-    \end{cases}
-\]
-$x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
+\begin{example}
+    \[f(x) = x^2\]
+    \begin{itemize}
+        \item $f(3)=9$ (sprich \glqq f von 3 ist 9\grqq{})
+        \item \glqq Der Wert der Funktion f zum Argument 3 ist 9\grqq{}
+        \item \glqq x=-3 wird auf y=9 abgebildet \grqq{}
+        \item \glqq Der Funktionswert $9$ hat zwei Urbilder: $3$ und $-3$\grqq{}
+        \item \glqq Das Bild von $-3$ unter der Funktion $f$ ist $9$\grqq{}
+    \end{itemize}
+\end{example}
+\newpage
+
+\subsection{Mehr zu Definitions- und Wertemengen}
+In diesem Abschnitt werden wir uns mit den Mengen beschäftigen, die in der Definition einer Funktion vorkommen. Wir werden sehen, dass es zwei verschiedene Arten von Definitions- und Wertemengen gibt.
+\subsubsection{Maximale Defintionsmenge}
+% Die Definitionsmenge ist einfach die Menge aller für die Verarbeitung durch die Funktion zulässigen Werte. Dies kann ein Intervall oder eine komplizierter aufgebaute Menge sein.
+Zu einer Funktion gehören die Definitionsmenge $\D$, die Wertemenge $\W$ und die Abbildungsvorschrift (meist in Form einer Funktionsgleichung). Oft ist die Definitionsmenge $\D$ nicht explizit angegeben. In diesem Fall ist die Definitionsmenge die grösstmögliche Menge an Eingabewerten, die man in die Funktionsgleichung einsetzen kann. Man spricht dann von der \textbf{maximalen} Definitionsmenge.
+% \begin{example}
+%     \[f(x) = x^2\]
+%     Jede relle Zahl ist als Input erlaubt, deshalb ist $\D = \R$.
+
+%     Es kann aber auch sein, dass wir nur an den Quadraten der positiven reellen Zahlen interessiert sind.
+% \end{example}
+\begin{deff}[Maximale Definitionsmenge]{}
+    Die \textbf{maximale} Definitionsmenge einer Funktion ist die grösstmögliche Menge an Eingabewerten, für die die Funktion definiert ist.
+\end{deff}
+
+\begin{example}
+    \[g(x) = \dfrac{1}{x}\]
+    Die maximale Definitionsmenge ist $\D = \R \setminus \{0\}$, da die Funktion für $x=0$ nicht definiert ist.
+\end{example}
+
+\begin{example}
+    \[h(x) = \sqrt{x}\]
+    Die maximale Definitionsmenge ist $\D = \R_0^+$, da die Funktion für $x<0$ nicht definiert ist (die Wurzel aus einer negativen Zahl ist nicht definiert).
+\end{example}
+
+\begin{example}
+    \[f(x)=10x +2\]
+    Die maximale Definitionsmenge ist $\D = \R$, da jede reelle Zahl als Input erlaubt ist. Es kann allerdings Gründe geben nicht die gesamte Menge aller reellen Zahlen zu erlauben. Wenn beispielweise $f$ die Zuordnung \textit{Schrott in kg} $\mapsto$ \textit{Preis in CHF} beschreibt, dann ist die Definitionsmenge $\D = \R^+_0$, da negative Gewichte keinen Sinn ergeben. Ebenso könnte die Definitionsmenge aus anderen Gründen auch anders aussehen.
+\end{example}
+\subsubsection{Bildmenge}
+Wie die Definitionsmenge gehört auch die Wertemenge zu einer Funktion. Die Wertemenge ist eine Menge, die alle möglichen Outputs enthält oder etwas genauer: Die Menge, in die die Funktion abbildet.
+\begin{center}
+    \tikzset{
+        dot/.style = {circle, inner sep=1.4pt, fill=black, draw=black},
+        arr/.style = {->, >=Stealth, line width=1.5pt},
+        setellipse/.style = {draw, ellipse, minimum width=30mm, minimum height=50mm}
+    }
+    \resizebox{0.4\linewidth}{!}{%
+        \begin{tikzpicture}[font=\small,>={Stealth[length=10pt,width=8pt]}]
+
+            % ---------- Panel 1: eine Funktion ----------
+            \begin{scope}
+                \node[setellipse] (DL) at (0,0) {};
+                \node[setellipse,right=32mm of DL] (WL) {};
+                \node[above=2mm of DL] {$\D$};
+                \node[above=2mm of WL] {$\W$};
+
+                \node[dot] (a1) at ([xshift=-2mm,yshift=10mm]DL.center) {};
+                \node[dot] (a2) at ([xshift=-2mm,yshift=0mm]DL.center) {};
+                \node[dot] (a3) at ([xshift=-2mm,yshift=-10mm]DL.center) {};
+                \node[dot] (a4) at ([xshift=-2mm,yshift=-20mm]DL.center) {};
+
+                \node[dot] (b1) at ([xshift=2mm,yshift=18mm]WL.center) {};
+                \node[dot] (b2) at ([xshift=2mm,yshift=6mm]WL.center) {};
+                \node[dot] (b3) at ([xshift=2mm,yshift=-6mm]WL.center) {};
+                \node[dot, red] (b4) at ([xshift=2mm,yshift=-18mm]WL.center) {};
+
+                \draw[arr] (a1) -- (b1);
+                \draw[arr] (a2) -- (b3);
+                \draw[arr] (a3) -- (b2);
+                \draw[arr] (a4) -- (b3);
+
+                % \node[below=6mm of $(DL.south)!0.5!(WL.south)$] {eine Funktion};
+            \end{scope}
+        \end{tikzpicture}}
+\end{center}
+Hier werden nicht alle Werte in $\W$ getroffen (der rote Wert). Dies ist erlaubt, genauso gut könnte man aber auch als Wertemenge nur die Werte angeben, die tatsächlich getroffen werden.
+\begin{deff}[Bildmenge]{}
+    Die \textbf{Bildmenge} einer Funktion $f$ ist die Menge aller Werte, die tatsächlich getroffen werden. Sie ist also eine Teilmenge der Wertemenge $\W$.
+\end{deff}
+Oft gibt man für die Wertemenge einfach $\R$ an, da die Outputs jeder Funktion, die uns begegnet, alle in $\R$ liegen. Manchmal will man es aber genauer wissen und gibt die Bildmenge an.
+\begin{example}
+    \[f(x) = x^2\]
+    Als Wertemenge kann man $\W = \R$ angeben, da das Quadrat jeder reellen Zahl eine reelle Zahl ergibt. Die Bildmenge ist aber \(\mathbb{R}_0^+\), da nur nichtnegative Zahlen getroffen werden und gleichzeitig jede nichtnegative reelle Zahl als Funktionswert vorkommt. Es sind also folgende Wertemengen möglich:
+    \begin{itemize}
+        \item $\W = \R$
+        \item $\W = \R_0^+$
+        \item $\W = [-10, \infty [$
+    \end{itemize}
+    $[1,2]$ könnte man nicht als Wertemenge angeben, da sonst für beispielsweise $x=3$ der Output $y=9$ nicht in der Wertemenge liegt.
+\end{example}
+\newpage
+\subsubsection{Urbild bestimmen}
+Das Urbild eines Funktionswertes (Outputs) $y$ unter einer Funktion $f$ ist die Menge aller Werte $x$, die auf $y$ abgebildet werden.
+\begin{example}
+    \[f(x) = x^2-5x + 8\]
+    Bestimmen Sie das Urbild von $y=2$ unter $f$.
+
+    \kariert{10}
+\end{example}
 \newpage
 \subsubsection{Übungen}
 \begin{enumerate}
@@ -288,6 +446,7 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
               \item Körpergrösse einer Person $\mapsto$ Alter der Person
               \item Alter einer Person $\mapsto$ Körpergrösse der Person
               \item Höhe in m ü. M. an einem Ort $\mapsto$ Luftdruck in dieser Höhe an diesem Ort
+              \item Tageslänge $\mapsto$ Tag im Jahr
           \end{enumerate}
     \item An einer Skiliftstation wurde an einem Wintertag zu jeder Stunde die Temperatur in $^\circ$C gemessen und protokolliert.
           Entscheiden Sie aufgrund der Wertetabelle, ob es sich bei den Zuordnungen $U \mapsto T$ bzw. $T \mapsto U$ um eine Funktion handelt oder nicht. Begründen Sie Ihre Antwort.
@@ -298,22 +457,22 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
                   Temperatur $T$ & -4.5 & -4 & -2 & -1 & 0  & 1  & 0.5 & 1  & -1 & -3
               \end{tabular}
           \end{center}
-    \item Entscheiden Sie, ob es sich bei der Zuordnung um eine Funktion handelt oder nicht.
+    \item Entscheiden Sie, ob es sich bei der Zuordnung um eine Funktion handelt oder nicht. Falls ja, geben Sie die Funktionsgleichung inklusive Definitionsbereich an.
           \begin{enumerate}
-              \item Dem Tag $t$ im Jahr wird die Niederschlagsmenge $n$ zugeordnet.
-              \item Der Tageslänge $\ell$ wird der Tag $t$ im Jahr zugeordnet.
-              \item Jeder ganzen Zahl $z$ wird ihr Quadrat $q$ zugeordnet.
-              \item Jeder natürlichen Zahl $n$ wird die um 2 grössere Zahl zugeordnet.
+              \item Jeder ganzen Zahl wird ihr Quadrat zugeordnet.
+              \item Jeder natürlichen Zahl wird die um 2 grössere Zahl zugeordnet.
               \item Jeder negativen Zahl wird ihr Betrag zugeordnet.
-              \item Der Quersumme $QS(n)$ der natürlichen Zahl $n$ wird die Zahl $n$ zugeordnet.
+              \item Der Quersumme einer natürlichen Zahl $n$ wird die Zahl $n$ zugeordnet.
+              \item Jeder reellen Zahl ausser $0$ wird ihr Kehrwert zugeordnet.
+              \item Jeder positiven reellen Zahl $x$ wird diejenige Zahl zugeordnet, deren Quadrat $x$ ergibt.
           \end{enumerate}
-    \item Entscheiden Sie, ob die Zuordnung eine Funktion ist oder nicht.
-          \begin{enumerate}
-              \item Jeder natürlichen Zahl wird ihre Anzahl Teiler zugeordnet.
-              \item \( x \in \{2,3,4\} \mapsto \) natürliche Zahl \( n \) zwischen 1 und 11, die den Teiler \( x \) hat.
-              \item \( f : x \mapsto y = 2 \cdot x \)
-              \item \( f : x \mapsto y = -x \)
-          \end{enumerate}
+          % \item Entscheiden Sie, ob die Zuordnung eine Funktion ist oder nicht.
+          %       \begin{enumerate}
+          %           \item Jeder natürlichen Zahl wird ihre Anzahl Teiler zugeordnet.
+          %           \item \( x \in \{2,3,4\} \mapsto \) natürliche Zahl \( n \) zwischen 1 und 11, die den Teiler \( x \) hat.
+          %           \item \( f : x \mapsto y = 2 \cdot x \)
+          %           \item \( f : x \mapsto y = -x \)
+          %       \end{enumerate}
     \item Gegeben ist die Funktion \( g \) mit der Funktionsgleichung
           \[
               g(x) = 2x^2 - x.
@@ -324,11 +483,6 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
                   \item \( g(-2) \)
                   \item \( g(0) \)
                   \item \( g\left(\tfrac{1}{2}\right) \)
-                  \item \( g\left(\tfrac{3}{2}\right) \)
-                  \item \( g(t) \)
-                  \item \( g(t^2) \)
-                  \item \( g(\sqrt{x}) \)
-                  \item \( g(x + 2) \)
               \end{enumerate}
           \end{multicols}
     \item Gegeben ist die Funktion \( f(x) = \dfrac{6}{x - 1} \)
@@ -336,7 +490,7 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
               \item Berechnen Sie \( f(0) \).
               \item Berechnen Sie den Funktionswert an der Stelle 3.
               \item Geben Sie das Urbild von 12 an.
-              \item Geben Sie den grösstmöglichen Definitionsbereich und die entsprechende Wertemenge an.
+              \item Geben Sie den grösstmöglichen Definitionsbereich und eine mögliche Wertemenge an.
               \item Welche Argumente werden auf sich \underline{selber} abgebildet? (Tipp: Produkt = 0)
           \end{enumerate}
 
@@ -351,7 +505,7 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
           \]
           \begin{enumerate}[label=\alph*)]
               \item Bestimmen Sie \( \operatorname{sgn}(\pi) \) und \( \operatorname{sgn}(-100) \).
-              \item Geben Sie den Definitionsbereich und die Wertemenge der Vorzeichenfunktion an.
+              \item Geben Sie den maximalen Definitionsbereich und die Bildmenge der Vorzeichenfunktion an.
               \item Sei \( a \) eine beliebige reelle Zahl. Was ist dann \( |a| \cdot \operatorname{sgn}(a) \)?
                     \begin{enumerate}[label=\roman*)]
                         \item Falls \( a > 0 \) ist? \\
@@ -362,10 +516,11 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
 
     \item Sei \( p: x \mapsto 2x + 1 \)
           \begin{enumerate}[label=\alph*)]
+              \item Geben Sie den maximalen Definitionsbereich und die Bildmenge der Funktion \( p \) an.
               \item Berechnen Sie \( p(3) \).
               \item Berechnen Sie \( p(p(3)) \). Wobei das so zu verstehen ist, dass der Output \( p(3) \) nochmals als Input der Funktion \( p \) dient.
               \item Was ist dann \( p(p(p(3))) \)?
-              \item Und allgemein \( p(p(p(a))) \)?
+              \item Was ist das Urbild von \( 7 \) unter \( p \)?
               \item Welches Argument wird auf sich selbst abgebildet?
           \end{enumerate}
 
@@ -373,8 +528,8 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
           \begin{enumerate}[label=\alph*)]
               \item Was ist \( \sqrt{36} \)? Und was \( \sqrt{0} \)?
               \item Wieso muss betont werden, dass \( y \) nicht negativ ist?
-              \item Geben Sie Definitionsbereich und Wertemenge der Wurzelfunktion an.
-              \item Definitionsbereich heisst auf Englisch \textit{domain}. Tippen Sie \( \sqrt{-9} \) in den Taschenrechner. Welche Meldung erscheint? Wieso?
+              \item Geben Sie den maximalen Definitionsbereich und die Bildmenge der Wurzelfunktion an.
+              \item Bestimmen Sie das Urbild von \(7\) unter der Wurzelfunktion.
               \item Gibt es Argumente, die kleiner sind als deren Funktionswerte? Welche?
           \end{enumerate}
 
@@ -389,102 +544,189 @@ $x=4$ wird auf $|4|=4$ abgebildet, $-5$ hingegen auf $|-5|=5$.
               \item Wie viele solche Funktionen gibt es, bei denen kein Element auf sich selbst abgebildet wird?
           \end{enumerate}
 
-    \item \label{aufgabe:teileranzahlfunktion} \textbf{Challenge:} \\
-          Für die Teileranzahl-Funktion \[ \tau(n)= \textit{Anzahl Teiler von n}\] kann nicht so leicht eine Funktionsgleichung angeben. Allerdings kann man \( \tau(n) \) aus der Primfaktorzerlegung von \( n \) bestimmen:
-          \[
-              \text{Sei } n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}
-          \]
-          die Primfaktorzerlegung von \( n \). Berechnen Sie daraus \( \tau(n) \).
+          % \item \label{aufgabe:teileranzahlfunktion} \textbf{Challenge:} \\
+          %       Für die Teileranzahl-Funktion \[ \tau(n)= \textit{Anzahl Teiler von n}\] kann nicht so leicht eine Funktionsgleichung angeben. Allerdings kann man \( \tau(n) \) aus der Primfaktorzerlegung von \( n \) bestimmen:
+          %       \[
+          %           \text{Sei } n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}
+          %       \]
+          %       die Primfaktorzerlegung von \( n \). Berechnen Sie daraus \( \tau(n) \).
 \end{enumerate}
 \newpage
 \subsubsection{Lösungen}
+
 \begin{enumerate}
-    \item \begin{multicols}{4}\begin{enumerate}[label=\roman*)]
-                  \item ja \item nein \item nein \item ja
-              \end{enumerate}\end{multicols}
-    \item \begin{multicols}{3}\begin{enumerate}
-                  \item Funktion
-                  \item Funktion
-                  \item keine Funktion
-                  \item keine Funktion
-                  \item Funktion
-                  \item Funktion
+
+    \item
+          \begin{multicols}{4}
+              \begin{enumerate}
+                  \item ja
+                  \item nein
+                  \item nein
+                  \item ja
               \end{enumerate}
           \end{multicols}
-    \item $U \mapsto T$: Funktion; $T \mapsto U$: keine Funktion, da beispielweise für $T=1$ zwei unterschiedliche Funktionswerte angegeben sind.
-    \item \begin{enumerate}
-              \item Funktion
-              \item keine Funktion, da es Tage mit identischer Tageslänge gibt
-              \item Funktion
-              \item Funktion
-              \item Funktion
-              \item keine Funktion
-          \end{enumerate}
-    \item \begin{multicols}{4}\begin{enumerate}
+
+    \item
+          \begin{multicols}{3}
+              \begin{enumerate}
+                  \item Funktion
                   \item Funktion
                   \item keine Funktion
+                  \item keine Funktion
+                  \item keine Funktion % NEU/KORRIGIERT
                   \item Funktion
-                  \item Funktion
-              \end{enumerate}\end{multicols}
-    \item \begin{multicols}{4}\begin{enumerate}
-                  \item $10$
-                  \item $0$
-                  \item $0$
-                  \item $3$
-                  \item $2t^2-t$
-                  \item $2t^4-t^2$
-                  \item $2x-\sqrt{x}$
-                  \item $2x+7x+6$
+                  \item keine Funktion % NEU/KORRIGIERT
               \end{enumerate}
           \end{multicols}
-    \item \( f(x) = \dfrac{6}{x-1} \)
+
+    \item
+          $U \mapsto T$: Funktion;
+          $T \mapsto U$: keine Funktion, da beispielsweise für $T=1$
+          zwei unterschiedliche Uhrzeiten zugeordnet sind.
+
+    \item
           \begin{enumerate}
-              \item \( f(0) = -6 \)
-              \item \( f(3) = 3 \)
-              \item \( x = \dfrac{3}{2} \)
-              \item \( D = \mathbb{R} \setminus \{1\}; \quad W = \mathbb{R} \setminus \{0\} \)
-              \item \( \dfrac{6}{x-1} = x \Leftrightarrow x^2 - x - 6 = 0 \Leftrightarrow (x - 3)(x + 2) = 0 \Leftrightarrow x = 3 \text{ oder } x = -2 \)
+              \item Funktion: $f(x)=x^2$, $D=\mathbb{Z}$ % NEU/KORRIGIERT
+
+              \item Funktion: $f(x)=x+2$, $D=\mathbb{N}$ % NEU/KORRIGIERT
+
+              \item Funktion: $f(x)=|x|$, $D=\mathbb{R}^-$ % NEU/KORRIGIERT
+
+              \item keine Funktion % NEU/KORRIGIERT
+
+              \item Funktion: $f(x)=\dfrac{1}{x}$,
+                    $D=\mathbb{R}\setminus\{0\}$ % NEU/KORRIGIERT
+
+              \item keine Funktion, da für jede Zahl zwei verschiedene Werte zugeordnet wären  (Bsp.: für $x=1$ wäre $y=-1$ und $y=1$ möglich) % NEU/KORRIGIERT
           \end{enumerate}
+
+    \item
+          \begin{multicols}{4}
+              \begin{enumerate}
+                  \item $g(-2)=10$
+                  \item $g(0)=0$
+                  \item $g\left(\tfrac12\right)=0$
+              \end{enumerate}
+          \end{multicols}
+
+    \item
+          $f(x)=\dfrac{6}{x-1}$
+
+          \begin{enumerate}
+              \item $f(0)=-6$
+
+              \item $f(3)=3$
+
+              \item $x=\dfrac{3}{2}$
+
+              \item $D=\mathbb{R}\setminus\{1\};
+                        \quad W=\mathbb{R}\setminus\{0\}$
+
+              \item
+                    $\dfrac{6}{x-1}=x
+                        \Leftrightarrow x^2-x-6=0
+                        \Leftrightarrow (x-3)(x+2)=0
+                        \Leftrightarrow x=3 \text{ oder } x=-2$
+          \end{enumerate}
+
     \item Vorzeichenfunktion
+
           \begin{enumerate}
-              \item \( \operatorname{sgn}(\pi) = 1 \) und \( \operatorname{sgn}(-100) = -1 \)
-              \item \( D = \mathbb{R}; \quad W = \{-1, 0, 1\} \)
-              \item \( |a| \cdot \operatorname{sgn}(a) = a \)
+              \item $\operatorname{sgn}(\pi)=1$ und
+                    $\operatorname{sgn}(-100)=-1$
+
+              \item $D=\mathbb{R};
+                        \quad W=\{-1,0,1\}$
+
+              \item $|a|\cdot\operatorname{sgn}(a)=a$
           \end{enumerate}
-    \item \( p : x \mapsto 2x + 1 \)
+
+    \item
+          $p:x\mapsto 2x+1$
+
           \begin{enumerate}
-              \item \( p(3) = 7 \)
-              \item \( p(p(3)) = 15 \)
-              \item \( p(p(p(3))) = 31 \)
-              \item \( p(p(p(a))) = 8a + 7 \)
-              \item \( x = -1 \)
+              \item $D=\mathbb{R};
+                        \quad W=\mathbb{R}$ % NEU/KORRIGIERT
+
+              \item $p(3)=7$
+
+              \item $p(p(3))=15$
+
+              \item $p(p(p(3)))=31$
+
+              \item $x=3$ % NEU/KORRIGIERT
+
+              \item $x=-1$ % NEU/KORRIGIERT
           \end{enumerate}
 
     \item Wurzelfunktion
+
           \begin{enumerate}
-              \item \( \sqrt{36} = 6 \) und \( \sqrt{0} = 0 \)
-              \item Weil es sonst zu einem Input zwei Outputs geben kann, dann ist es keine Funktion mehr.
-              \item \( D = \mathbb{R}_0^+; \quad W = \mathbb{R}_0^+ \)
-              \item \texttt{Domain error}
-              \item Ja, alle im Bereich \( ]0,1[ \)
-          \end{enumerate}
-    \item Challenge:
-          \begin{enumerate}
-              \item 1296
-              \item 625
+              \item $\sqrt{36}=6$ und $\sqrt{0}=0$
+
+              \item Weil es sonst zu einem Input zwei Outputs geben könnte;
+                    dann wäre es keine Funktion mehr; Beispiel: für $y^2=9$ kommen zwei mögliche Outputs in Frage: $y=3$ und $y=-3$.
+
+              \item $D=\mathbb{R}_0^+;
+                        \quad W=\mathbb{R}_0^+$
+
+              \item $x=49$ % NEU/KORRIGIERT
+
+              \item Ja, alle $x\in]0,1[$.
           \end{enumerate}
 
     \item Challenge:
-          \[
-              \tau(n) = (a_1 + 1) \cdot (a_2 + 1) \cdot \ldots \cdot (a_k + 1)
-          \]
+
+          \begin{enumerate}
+              \item $1296$
+              \item $625$
+          \end{enumerate}
+
 \end{enumerate}
 \newpage
 
 \section{Graphen von Funktionen}
 \subsection{Einführungsaufgabe}
 \begin{center}
-    \includegraphics[width=\textwidth]{Einführung/im/Rennwagen.png}
+    \begin{tikzpicture}[x=4cm, y=0.025cm, >=stealth, font=\sffamily\small]
+        % Achsen
+        \draw[thick,->] (0,0) -- (3.3,0);
+        \draw[thick,->] (0,0) -- (0,210);
+
+        % x-Achse: Ticks und Beschriftung unten
+        \foreach \x in {0,0.2,0.4,0.6,0.8,1,1.2,1.4,1.6,1.8,2,2.2,2.4,2.6,2.8,3}
+        \draw[thick] (\x,0) -- ++(0,-3pt) node[below] {\x};
+        % x-Achse: Zwischenwerte oben
+        % \foreach \x in {0.5,1.5,2.5}
+        % \draw[thick] (\x,0) -- ++(0,-3pt) node[above=4pt] {\x};
+
+        % y-Achse
+        \foreach \y in {0,20,...,180}
+        \draw[thick] (0,\y) -- ++(-3pt,0) node[left] {\y};
+
+        % Geschwindigkeitskurve
+        \draw[line width=1.5pt]
+        (0,160)
+        .. controls (0.15,158) and (0.20,88)  .. (0.35,88)
+        .. controls (0.48,88)  and (0.55,162) .. (0.68,162)
+        -- (1.08,162)
+        .. controls (1.20,162) and (1.20,66)  .. (1.30,66)
+        .. controls (1.45,66)  and (1.55,163) .. (1.78,163)
+        -- (2.30,163)
+        .. controls (2.45,163) and (2.45,106) .. (2.55,106)
+        .. controls (2.65,106) and (2.65,162) .. (2.80,162)
+        -- (3,162);
+
+        % Beschriftungen
+        \node[align=center, font=\sffamily\bfseries\large] at (1.5,245)
+        {Geschwindigkeit eines Rennwagens\\auf einer 3 km Rundstrecke};
+        \node[align=left, anchor=east] at (-0.2,80)
+        {Geschwin-\\digkeit\\(km/h)};
+        \node[align=center, anchor=north] at (2.6,-28pt)
+        {Entfernung vom\\Startpunkt der Bahn (km)};
+        \draw[->] (0,-36pt) -- (0,-18pt);
+        \node[anchor=north west, inner xsep=0pt] at (-0.02,-36pt) {Startlinie};
+    \end{tikzpicture}
 \end{center}
 Das Bild oben zeigt den Verlauf der Funktion, die jeder Stelle der 3km langen Rennstrecke die Geschwindigkeit des Rennwagens zuordnet.
 \begin{enumerate}
@@ -493,8 +735,14 @@ Das Bild oben zeigt den Verlauf der Funktion, die jeder Stelle der 3km langen Re
     \item Welche der unten abgebildeten Rennstrecken passt zum Geschwindigkeitsprofil oben? Wieso?
 \end{enumerate}
 \begin{center}
-    \includegraphics[width=\textwidth]{Einführung/im/Rennstrecken.png}
+    \includegraphics[width=0.6\textwidth]{Einführung/im/Rennstrecken.png}
 \end{center}
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item Im obigen Diagramm ist eine Zuordnung/Funktion dargestellt. Welche beiden Grössen werden im obigen Diagramm einander zugeordnet?
+    \item Geben Sie ein paar Funktionswerte (ungefähr) an, die Sie aus dem Diagramm ablesen können.
+    \item Geben Sie den Definitions- und Wertebereich der Funktion an.
+\end{enumerate}
 \newpage
 \subsection{Das kartesische Koordinatensystem und der Graph einer Funktion}
 Was für zahlreiche Alltagssituationen zutrifft, stimmt auch für Funktionen: Ein Bild sagt mehr als tausend Worte. Schafft man es, eine Funktion bildlich darzustellen, so werden ihre Besonderheiten auf einen Blick sichtbar.
@@ -562,7 +810,7 @@ Der Graph einer Funktion ist eine Menge von Punkten im Kartesischen Koordinatens
             \addplot[dashed] coordinates {(0,-16/3) (2,-16/3)};
 
             % Achsenbeschriftungen an den Hilfslinien
-            \node[anchor=north] at (axis cs:2,0) {$2$};
+            % \node[anchor=north] at (axis cs:2,0) {$2$};
             \node[anchor=east]  at (axis cs:0,-16/3) {$-\dfrac{16}{3}$};
 
         \end{axis}
@@ -570,11 +818,12 @@ Der Graph einer Funktion ist eine Menge von Punkten im Kartesischen Koordinatens
 \end{center}
 \begin{itemize}
     \item Der Punkt $(2,-\frac{16}{3})$ liegt auf dem Graphen von $f$, weil $f(2)=-\frac{16}{3}$
+    \item Auf der x-Achse sind die Input-Werte (Argumente) der Funktion abgetragen, auf der y-Achse die Output-Werte (Funktionswerte).
     \item Im Bereich $[-4,4]$ ist der kleinste Funktionswert für $x=-3$ erreicht und ist ungefährt $y=-15$
 \end{itemize}
 \begin{deff}[Graph einer Funktion]{}
     Der Graph einer Funktion $f$ ist die Menge der Punkte mit den Koordinaten $(x,y)$ im Kartesischen Koordinatensystem mit der Eigenschaft, dass $y$ der Output der Funktion zum Input $x$ ist:
-    \[\operatorname{Graph} f={(x,y)| y=f(x)}\]
+    \[\operatorname{Graph} f=\{(x,y)| y=f(x)\}\]
 \end{deff}
 
 \subsection{Nicht jede Kurve ist der Graph einer Funktion}
@@ -623,6 +872,7 @@ Wichtige Eigenschaft einer Funktion:
         Die Kurve in der Grafik rechts kann nicht der Graph einer Funktion sein, weil die Parallele zur y-Achse an der Stelle $x=-1.6$ die Kurve in zwei Punkten schneidet. Das würde bedeuten, dass die entsprechende Zuordnung für den Input $x=-1.6$ zwei mögliche Outputs liefert. (ungefähr $-0.4$ und $-4$). Das widerspricht der Vorgabe, dass die Funktion eindeutig sein muss.
     \end{minipage}
 \end{example}
+\newpage
 \subsection{Von der Funktiongleichung zum Funktionsgraphen}
 \[g(x)=2x-x^2\]
 Um den Graph einer Funktion zu zeichnen, erstellt man zuerst eine sogenannte Wertetabelle. Darin werden die Funktionswerte an einigen Stellen eingetragen. Für das vorliegende Beispiel wurden die Werte für ganzzahlige Argumente zwischen $-3$ und $5$ berechnet:
@@ -643,34 +893,40 @@ Anhand der Wertetabelle erkennt man, dass für die vorliegende Funktion ein Koor
         \begin{axis}[
                 axis lines=middle,
                 axis line style={->},
+                % axis equal image,
                 xlabel={$x$},
                 ylabel={$y$},
                 xmin=-4.5, xmax=6.5,
-                ymin=-19, ymax=7,
+                ymin=-16, ymax=2,
                 xtick distance=1,
-                ytick distance=5,
+                ytick distance=1,
+                grid=both,
                 enlargelimits=false,
                 clip=false,
-                width=0.5\textwidth
+                width=0.6\textwidth,
+                font=\scriptsize,
             ]
         \end{axis}
     \end{tikzpicture}
 \end{center}
-Jedes Zahlenpärchen (x│y) in der Wertetabelle entspricht einem Punkt auf dem Graphen:
+Jedes Zahlenpärchen $(x,y)$ in der Wertetabelle entspricht einem Punkt auf dem Graphen:
 \begin{center}
     \begin{tikzpicture}
         \begin{axis}[
                 axis lines=middle,
                 axis line style={->},
+                % axis equal image,
                 xlabel={$x$},
                 ylabel={$y$},
                 xmin=-4.5, xmax=6.5,
-                ymin=-19, ymax=7,
+                ymin=-16, ymax=2,
                 xtick distance=1,
-                ytick distance=5,
+                ytick distance=1,
+                grid=both,
                 enlargelimits=false,
                 clip=false,
-                width=0.5\textwidth
+                width=0.6\textwidth,
+                font=\scriptsize,
             ]
             \fill (-3,-15) circle (3pt);
             \fill (-2,-8)  circle (3pt);
@@ -690,15 +946,18 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
         \begin{axis}[
                 axis lines=middle,
                 axis line style={->},
+                % axis equal image,
                 xlabel={$x$},
                 ylabel={$y$},
                 xmin=-4.5, xmax=6.5,
-                ymin=-19, ymax=7,
+                ymin=-16, ymax=2,
                 xtick distance=1,
-                ytick distance=5,
+                ytick distance=1,
+                grid=both,
                 enlargelimits=false,
                 clip=false,
-                width=0.5\textwidth
+                width=0.6\textwidth,
+                font=\scriptsize,
             ]
             \fill (-3,-15) circle (3pt);
             \fill (-2,-8)  circle (3pt);
@@ -710,7 +969,7 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
             \fill ( 4,-8)  circle (3pt);
             \fill ( 5,-15) circle (3pt);
             \addplot[
-                domain=-4:6, samples=200, smooth,
+                domain=-3.1:5.1, samples=200, smooth,
                 thick, red!60!black
             ]
             {2*x-x^2};
@@ -961,17 +1220,18 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
               \end{center}
           \end{minipage}
     \item Erstellen Sie eine Wertetabelle und zeichnen Sie den Graphen der folgenden Funktionen:
-          \begin{enumerate}
-              \item \( a(x) = \frac{x}{2} \)
-              \item \( b(x) = -\frac{1}{3}x + 6 \)
-              \item \( c(x) = 2\sqrt{x} \)
-              \item \( d(x) = -3\sqrt{x} \)
-              \item \( e(x) = \frac{5}{x + 3} \)
-              \item \( f(x) = \frac{1}{2}x^2 - \frac{9}{2} \)
-              \item \( g(x) = \sqrt{2x + 7} \)
-          \end{enumerate}
-
-    \item Zeichnen Sie die Graphen der folgenden Funktionen. \\
+          \begin{multicols}{3}
+              \begin{enumerate}
+                  \item \( a(x) = \frac{x}{2} \)
+                  \item \( b(x) = -\frac{1}{3}x + 6 \)
+                  \item \( c(x) = 2\sqrt{x} \)
+                        %   \item \( d(x) = -3\sqrt{x} \)
+                  \item \( d(x) = \frac{5}{x + 3} \)
+                  \item \( e(x) = \frac{1}{2}x^2 - \frac{9}{2} \)
+                        %   \item \( g(x) = \sqrt{2x + 7} \)
+              \end{enumerate}
+          \end{multicols}
+    \item Zeichnen Sie die Graphen der folgenden Funktionen \textbf{ohne Wertetabelle}. \\
           \textit{Tipp: Überlegen Sie, wie sich jeder Graph ab Aufgabe b) von dem davor unterscheidet.}
           \begin{enumerate}
               \item \( x \mapsto |x| \)
@@ -979,6 +1239,7 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
               \item \( x \mapsto -|x| + 1 \)
               \item \( x \mapsto |-\,|x| + 1| \)
           \end{enumerate}
+
     \item Welcher Graph gehört zu welcher Funktion?
           \begin{center}
               \pgfplotsset{
@@ -1006,31 +1267,31 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
                       ]
 
                       % 1) y = x
-                      \nextgroupplot[title={a)}, domain=-4:8]
+                      \nextgroupplot[title={a)}, domain=-4:8,xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt] {x};
 
                       % 2) y = sqrt(x-1)
-                      \nextgroupplot[title={b)}, domain=1:9.5, xmin=-0.7, xmax=9.5, ymin =-0.5, ymax=5.8,xtick distance=1]
+                      \nextgroupplot[title={b)}, domain=1:9.5, xmin=-0.7, xmax=9.5, ymin =-0.5, ymax=5.8,xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt] {sqrt(x-1)};
 
                       % 3) y = -1.2x + 3
-                      \nextgroupplot[title={c)}, domain=-4:8]
+                      \nextgroupplot[title={c)}, domain=-4:8, xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt] {-1.2*x + 3};
 
                       % 4) y = 1.5^x
-                      \nextgroupplot[title={d)}, domain=-4:8]
+                      \nextgroupplot[title={d)}, domain=-4:8, xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt] {1.5^x};
 
                       % 5) y = 0.5x^2 - 1.5x
-                      \nextgroupplot[title={e)}, domain=-4:8]
+                      \nextgroupplot[title={e)}, domain=-4:8, xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt] {0.5*x^2 - 1.5*x};
 
                       % 6) y = 0.7x - 2
-                      \nextgroupplot[title={f)}, domain=-4:8]
+                      \nextgroupplot[title={f)}, domain=-4:8, xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt] {0.7*x - 2};
 
                       % 7) y = 2/(x+1)
-                      \nextgroupplot[title={g)}, domain=-4:8]
+                      \nextgroupplot[title={g)}, domain=-4:8, xtick distance=1, grid=both]
                       \addplot[draw=black, line width=0.3pt, domain=-4:-1.01] {2/(x+1)};
                       \addplot[draw=black, line width=0.3pt, domain=-0.99:8] {2/(x+1)};
                   \end{groupplot}
@@ -1049,11 +1310,9 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
                   \item \( y = \sqrt{x-1} \)
               \end{enumerate}
           \end{multicols}
-    \item Zeichnen Sie die Graphen der folgenden Funktionen:
-          \begin{enumerate}
-              \item \( y = \operatorname{sgn}(x) \) (Vorzeichenfunktion; vgl. Aufgabe~\ref{aufgabe:vorzeichenfunktion} auf Seite ~\pageref{aufgabe:vorzeichenfunktion})
-              \item \( y = \tau(n) \) für \( n \in \{1,2,3,\dots,10\} \) (Teileranzahl-Funktion; vgl. Aufgabe~\ref{aufgabe:teileranzahlfunktion} auf Seite ~\pageref{aufgabe:teileranzahlfunktion})
-          \end{enumerate}
+    \item Zeichnen Sie den Graphen der folgenden Funktion:
+
+          \( y = \operatorname{sgn}(x) \) (Vorzeichenfunktion; vgl. Aufgabe~\ref{aufgabe:vorzeichenfunktion} auf Seite ~\pageref{aufgabe:vorzeichenfunktion})
 
     \item \textbf{Challenge:} \( k:\; x \mapsto \sqrt{\,9 - (x-3)^2\,} \)
           \begin{enumerate}
@@ -1063,7 +1322,7 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
               \item Um welche spezielle Kurve handelt es sich beim Graphen?
               \item Beweisen Sie die Vermutung aus d) wie folgt:
                     \begin{enumerate}
-                        \item[i)] Betrachten Sie einen beliebigen Punkt \(P=(u\mid v)\) auf dem Graphen von \(k\).
+                        \item[i)] Betrachten Sie einen beliebigen Punkt \(P=(u, v)\) auf dem Graphen von \(k\).
                         \item[ii)] Berechnen Sie den Abstand zum Mittelpunkt mit Pythagoras.
                         \item[iii)] Formen Sie den Term aus ii) um, bis Sie das gewünschte Resultat erhalten.
                     \end{enumerate}
@@ -1087,7 +1346,7 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
           \end{multicols}
     \item \begin{multicols}{3}
               \begin{enumerate}
-                  \item $x=-2$ und $x=1$
+                  \item $x=-2$, $x=1$ und $x=7$
                   \item $x=-3$, $x=3$ und $x=6$
                   \item $f(2)\approx 1.5$, $f(5)\approx -1.2$
               \end{enumerate}
@@ -1129,13 +1388,13 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
                   {2*sqrt(x)};
                   \node[red, font=\scriptsize, left]
                   at (axis cs:1.3,2.5) {c)};
-                  \addplot[
-                      domain=-14:19, samples=100, smooth,
-                      thick, blue
-                  ]
-                  {-3*sqrt(x)};
-                  \node[blue, font=\scriptsize, right]
-                  at (axis cs:19,-13) {d)};
+                  %   \addplot[
+                  %       domain=-14:19, samples=100, smooth,
+                  %       thick, blue
+                  %   ]
+                  %   {-3*sqrt(x)};
+                  %   \node[blue, font=\scriptsize, right]
+                  %   at (axis cs:19,-13) {d)};
                   \addplot[
                       domain=-14:-3.36, samples=100, smooth,
                       thick, orange
@@ -1155,13 +1414,13 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
                   {1/2*x*x-9/2};
                   \node[black, font=\scriptsize, left]
                   at (axis cs:-5.5,10.625) {e)};
-                  \addplot[
-                      domain=-3.5:19, samples=100, smooth,
-                      thick, black
-                  ]
-                  {sqrt(2*x+7)};
-                  \node[black, font=\scriptsize, right]
-                  at (axis cs:19,6.5) {f)};
+                  %   \addplot[
+                  %       domain=-3.5:19, samples=100, smooth,
+                  %       thick, black
+                  %   ]
+                  %   {sqrt(2*x+7)};
+                  %   \node[black, font=\scriptsize, right]
+                  %   at (axis cs:19,6.5) {f)};
               \end{axis}
           \end{tikzpicture}
     \item \pgfplotsset{
@@ -1202,7 +1461,7 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
                   \addplot[draw=black, line width=0.3pt] {abs(-abs(x)+1)};
               \end{groupplot}
           \end{tikzpicture}
-    \item a)<->iii);  b)<->vii);  c)<->ii);  d)<->vi);  e)<->v);  f)<->i);  g)<->iv)
+    \item a) $\leftrightarrow$ iii);  b) $\leftrightarrow$ vii);  c) $\leftrightarrow$ ii);  d) $\leftrightarrow$ vi);  e) $\leftrightarrow$ v);  f) $\leftrightarrow$ i);  g) $\leftrightarrow$ iv)
     \item \begin{tikzpicture}[baseline=(current bounding box.north)]
               \begin{groupplot}[
                       axis lines=middle,
@@ -1221,22 +1480,10 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
                           }
                   ]
 
-                  \nextgroupplot[title={a)}]
-                  \addplot[domain=-5.5:-0.1, draw=black, line width=0.3pt] {sign(x)};
-                  \addplot[domain=0.1:5.5, draw=black, line width=0.3pt] {sign(x)};
-                  \fill (0,0) circle (2.5pt);
-
-                  \nextgroupplot[title={b)}, xmin=-0.2,xmax=10.2, ymin=-0.2, ymax=6]
-                  \fill (1,1) circle (2.5pt);
-                  \fill (2,2) circle (2.5pt);
-                  \fill (3,2) circle (2.5pt);
-                  \fill (4,3) circle (2.5pt);
-                  \fill (5,2) circle (2.5pt);
-                  \fill (6,4) circle (2.5pt);
-                  \fill (7,2) circle (2.5pt);
-                  \fill (8,4) circle (2.5pt);
-                  \fill (9,3) circle (2.5pt);
-                  \fill (10,4) circle (2.5pt);
+                  \nextgroupplot[title={$y=\operatorname{sgn}(x)$}]
+                  \addplot[domain=-5.5:-0.1, draw=red, line width=0.3pt] {sign(x)};
+                  \addplot[domain=0.1:5.5, draw=red, line width=0.3pt] {sign(x)};
+                  \fill[red] (axis cs:0,0) circle (1.5pt);
               \end{groupplot}
           \end{tikzpicture}
     \item Challenge:
@@ -1244,55 +1491,55 @@ Da der Definitionsbereich von $g$ alle reellen Zahlen umfasst, ist diese Menge v
               \item[a)] \(\mathbb{D}=[0,6],\qquad \mathbb{W}=[0,3]\)
 
               \item[b)] \textbf{Wertetabelle}\\[2mm]
-                  \renewcommand{\arraystretch}{1.3}
-                  \setlength{\tabcolsep}{10pt}
-                  \begin{tabular}{|c|c|c|c|c|c|c|c|}
-                      \hline
-                      \(x\)    & 0                         & 1                         & 2                         & 3 & 4 & 5 & 6 \\
-                      \hline
-                      \(k(x)\) & 0                         & \(\sqrt{5}\approx 2{,}2\) & \(\sqrt{8}\approx 2{,}8\) & 3
-                               & \(\sqrt{8}\approx 2{,}8\) & \(\sqrt{5}\approx 2{,}2\) & 0                                         \\
-                      \hline
-                  \end{tabular}
+                    \renewcommand{\arraystretch}{1.3}
+                    \setlength{\tabcolsep}{10pt}
+                    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+                        \hline
+                        \(x\)    & 0                         & 1                         & 2                         & 3 & 4 & 5 & 6 \\
+                        \hline
+                        \(k(x)\) & 0                         & \(\sqrt{5}\approx 2{,}2\) & \(\sqrt{8}\approx 2{,}8\) & 3
+                                 & \(\sqrt{8}\approx 2{,}8\) & \(\sqrt{5}\approx 2{,}2\) & 0                                         \\
+                        \hline
+                    \end{tabular}
 
               \item[c)] \textbf{Graph:}\\[2mm]
-                  \begin{tikzpicture}
-                      \begin{axis}[
-                              axis lines=middle,
-                              axis line style={->},
-                              xmin=-0.5, xmax=6.5,
-                              ymin=-0.5, ymax=3.5,
-                              xtick={0,1,2,3,4,5,6},
-                              ytick={0,1,2,3},
-                              grid=both,
-                              width=0.6\textwidth,
-                              height=0.35\textwidth,
-                              tick label style={font=\scriptsize},
-                              label style={font=\scriptsize},
-                              xlabel={$x$}, ylabel={$y$}
-                          ]
-                          \addplot[domain=0:6, samples=200, smooth, draw=black, line width=0.3pt]
-                          {sqrt(9 - (x-3)^2)};
-                      \end{axis}
-                  \end{tikzpicture}
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                                axis lines=middle,
+                                axis line style={->},
+                                xmin=-0.5, xmax=6.5,
+                                ymin=-0.5, ymax=3.5,
+                                xtick={0,1,2,3,4,5,6},
+                                ytick={0,1,2,3},
+                                grid=both,
+                                width=0.6\textwidth,
+                                height=0.35\textwidth,
+                                tick label style={font=\scriptsize},
+                                label style={font=\scriptsize},
+                                xlabel={$x$}, ylabel={$y$}
+                            ]
+                            \addplot[domain=0:6, samples=200, smooth, draw=black, line width=0.3pt]
+                            {sqrt(9 - (x-3)^2)};
+                        \end{axis}
+                    \end{tikzpicture}
 
               \item[d)] Es ist ein \textbf{Halbkreis} (oberer Halbkreis mit Mittelpunkt \(M=(3,0)\) und Radius \(r=3\)).
 
-              \item[e)]             Sei \(P=(u\mid v)\) ein beliebiger Punkt auf dem Graphen von \(k\).\\
-                  Abstand von \(P\) zum Mittelpunkt \(M=(3\mid 0)\):
-                  \[
-                      d=\sqrt{(u-3)^2+v^2}.
-                  \]
-                  Da \(P\) auf dem Graphen von \(k\) liegt, gilt \(v=\sqrt{\,9-(3-u)^2\,}\). Also
-                  \[
-                      d=\sqrt{(u-3)^2+\left(\sqrt{\,9-(3-u)^2\,}\right)^2}
-                      =\sqrt{(u-3)^2+9-(3-u)^2}.
-                  \]
-                  Da $(u-3)=-(3-u)$ ist, gilt \((u-3)^2=(3-u)^2\), somit streichen sich die beiden Klammern unter der Wurzel weg:
-                  \[
-                      d=\sqrt{9}=3.
-                  \]
-                  Damit haben alle Punkte des Graphen von \(k\) den Abstand \(3\) zu \(M\).
+              \item[e)]             Sei \(P=(u, v)\) ein beliebiger Punkt auf dem Graphen von \(k\).\\
+                    Abstand von \(P\) zum Mittelpunkt \(M=(3, 0)\):
+                    \[
+                        d=\sqrt{(u-3)^2+v^2}.
+                    \]
+                    Da \(P\) auf dem Graphen von \(k\) liegt, gilt \(v=\sqrt{\,9-(3-u)^2\,}\). Also
+                    \[
+                        d=\sqrt{(u-3)^2+\left(\sqrt{\,9-(3-u)^2\,}\right)^2}
+                        =\sqrt{(u-3)^2+9-(3-u)^2}.
+                    \]
+                    Da $(u-3)=-(3-u)$ ist, gilt \((u-3)^2=(3-u)^2\), somit streichen sich die beiden Klammern unter der Wurzel weg:
+                    \[
+                        d=\sqrt{9}=3.
+                    \]
+                    Damit haben alle Punkte des Graphen von \(k\) den Abstand \(3\) zu \(M\).
           \end{enumerate}
 \end{enumerate}
 \newpage
