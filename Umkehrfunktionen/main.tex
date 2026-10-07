@@ -10,19 +10,19 @@
           \begin{multicols}{2}
               \begin{enumerate}
                   \item $a(x) = 2x - 7$
-                  \item $b(x) = -\frac{1}{3}x + 11$
+                        %   \item $b(x) = -\frac{1}{3}x + 11$
                   \item $c(x) = \pi$
                   \item $d(x) = x^{4}$
                   \item $e(x) = 2\sqrt{x} + 1$
-                  \item $f(x) = 2\sqrt{x + 1}$
-                  \item $g(x) = \sqrt{2x + 1}$
-                  \item $h(x) = x^{2} - 3$
+                        %   \item $f(x) = 2\sqrt{x + 1}$
+                        %   \item $g(x) = \sqrt{2x + 1}$
+                        %   \item $h(x) = x^{2} - 3$
                   \item $i(x) = (x - 3)^{2}$
                   \item $j(x) = \frac{1}{x} + 5$
-                  \item $k(x) = \frac{1}{x+5}$
-                  \item $l(x) = \operatorname{sgn}(x)$
-                  \item $m(x) = x^{5} + 2$
-                  \item $n(x) = x^{6} + 2$
+                        %   \item $k(x) = \frac{1}{x+5}$
+                        %   \item $l(x) = \operatorname{sgn}(x)$
+                        %   \item $m(x) = x^{5} + 2$
+                        %   \item $n(x) = x^{6} + 2$
               \end{enumerate}
           \end{multicols}
     \item Alice und Bob spielen das gleiche Spiel.
@@ -36,8 +36,8 @@
     \item Gleiche Frage wie Nummer 3., aber für die Funktionen
           \begin{enumerate}
               \item $f(x) = \dfrac{2x - 5}{4}$
-              \item $f(x) = \sqrt{3x + 1}$ \quad (Was ist hier der maximale Definitionsbereich? Was die Wertemenge?)
-              \item $f(x) = \dfrac{1}{x - 4} + 9$ \quad (Was ist hier der maximale Definitionsbereich? Was die Wertemenge?)
+              \item $f(x) = \sqrt{3x + 1}$ \quad (Was ist hier der maximale Definitionsbereich? Was die Bildmenge?)
+              \item $f(x) = \dfrac{1}{x - 4} + 9$ \quad (Was ist hier der maximale Definitionsbereich? Was die Bildmenge?)
           \end{enumerate}
 \end{enumerate}
 \newpage
@@ -125,13 +125,13 @@
     \[\text{aus} \quad x_1\neq x_2 \quad \text{folgt} \quad f(x_1)\neq f(x_2)\]
 \end{deff}
 \begin{example}
-    Die Funktion $f(x)=x^2$ ist \underline{nicht} injektiv, weil (beispielsweise) $f(-2) =f(2)$ ist.
+    Die Funktion $f: \R \to \R,\ f(x)=x^2$ ist \underline{nicht} injektiv, weil (beispielsweise) $f(-2) =f(2)$ ist.
 \end{example}
 \begin{deff}[Surjektivität]{}
     Eine Funktion heisst \textbf{surjektiv}, wenn jedes Element der Zielmenge ein Urbild hat.
 \end{deff}
 \begin{example}
-    Die Funktion $f(x)=x^2$ ist \underline{nicht} surjektiv, weil (beispielsweise) $y=-4$ kein Urbild hat.
+    Die Funktion $f: \R \to \R,\ f(x)=x^2$ ist \underline{nicht} surjektiv, weil (beispielsweise) $y=-4$ kein Urbild hat.
 \end{example}
 \begin{deff}[Bijektivität]{}
     Eine Funktion heisst \textbf{bijektiv}, wenn sie sowohl injektiv wie auch surjektiv ist.
@@ -316,7 +316,7 @@ In den Einführungsaufgaben haben Sie bereits einige Male die Gleichung von Umke
 \newpage
 \subsection{Übungen}
 \begin{enumerate}
-    \item Bestimmen Sie den maximalen Definitionsbereich und die Wertemenge.
+    \item Bestimmen Sie den maximalen Definitionsbereich und die Bildmenge.
           Falls die Inverse existiert, geben Sie deren Gleichung sowie deren
           Definitionsbereich und Wertemenge an.
           \begin{enumerate}
@@ -670,7 +670,7 @@ zusammengesetzt aus den beiden Funktionen $f(x)=1-\frac{x^2}{c^2}$ und $g(x)=\sq
 
 Eine solche Verschachtelung nennt man \textbf{Verkettung} oder \textbf{Komposition} von Funktionen. In den folgenden Aufgaben sollen Sie einige allgemeine Erkenntnisse über verkettete Funktionen gewinnen.
 
-\subsection{Lernaufgabe}
+\subsection{Einführungsaufgaben}
 \begin{enumerate}
     \item Betrachten Sie die Funktionen $f(x)=2x-1$ und $g(x)=x^2$. Bestimmen Sie die Gleichung der Verkettung $f(g(x))$ und jene der Verkettung $g(f(x))$.
     \item Sei nun $h(x)=\sqrt{x}$ und $k(x)=3x+6$. Bestimmen Sie den Definitionsbereich von $h(k(x))$.
@@ -685,7 +685,6 @@ Verkettet man zwei oder noch mehr Funktionen, so werden sie hintereinander ausge
 \begin{example}
     Die Verkettung der Funktionen $f(x)=3x-5$ und $g(x)=x^2$ ist
     \[g(f(x))=(3x-5)^2\]
-    Diese Verkettung ist jedoch nur definiert, wenn der Output der inneren Funktion (im Beispiel ist das $f$) im Definitionsbereich der äusseren Funktion liegt.
 \end{example}
 \begin{deff}[Verkettung]{}
     Seien $f$ und $g$ zwei Funktionen mit der Eigenschaft, dass $\mathbb{W}_f\subset \mathbb{D}_g$ ist. Dann ist die Verkettung oder Komposition der beiden Funktion wie folgt definiert:
@@ -695,7 +694,11 @@ Verkettet man zwei oder noch mehr Funktionen, so werden sie hintereinander ausge
     Die Operation $g\circ f$ nennt man \glqq g nach f\grqq oder \glqq g kringel f\grqq{}.
 \end{deff}
 \begin{example}
-    Für $f(x)=\frac{1}{x}$ und $g(x)=x^2-1$ ist $(g\circ f)(x)=\frac{1}{x^2}-1$
+    \begin{align*}
+        g(x)=\frac{1}{x},\ \ f(x)=x^2-1 \\
+        (g\circ f)(x)=g(f(x))=g(x^2-1)=\frac{1}{x^2-1}
+    \end{align*}
+    Der Definitionsbereich der Verkettung ist $\mathbb{D}_{g\circ f}=\mathbb{R}\setminus\{-1,1\}$, da $f(-1)=f(1)=0$ und $g(0)$ nicht definiert ist.
 \end{example}
 
 \textbf{Bemerkungen:}
@@ -704,8 +707,8 @@ Verkettet man zwei oder noch mehr Funktionen, so werden sie hintereinander ausge
     \item Obwohl die Komposition nicht kommutativ ist, gibt es vereinzelt Funktionen, für welche $g\circ f=f\circ g$ ist. So zum Beispiel $f(x)=2x$ und $g(x)=3x$.
     \item Für invertierbare Funktionen gilt
           \[(f\circ f^{-1})(x)=(f^{-1}\circ f)(x)=x\]
-          Dies kann auch so ausgedrückt werden: $f\circ f^{-1}= f^{-1}\circ f=id$, wobei $id$ die sogenannte Identitätsfunktion ist: $id(x)=x$
 \end{itemize}
+\newpage
 Wird eine Funktion mit sich selbst komponiert, so spricht man von einer Iteration:
 \begin{deff}[Iteration]{}
     Die n-te Iterierte einer Funktion $f$ ist definiert durch
@@ -720,6 +723,7 @@ Wird eine Funktion mit sich selbst komponiert, so spricht man von einer Iteratio
 \begin{fazit}[]{}
     Vorsicht: $f^2 (x)$  steht für die Verkettung von $f$ mit sich selbst und nicht für die Multiplikation der Funktion $f$ mit sich selbst, die man mit $(f(x))^2$ bezeichnet. Mit den Funktionen aus dem Beispiel verdeutlicht: Für $f(x)=x+2$ ist $f^2 (x)=x+4$ und $(f(x))^2=(x+2)^2$
 \end{fazit}
+\newpage
 \subsection{Übungen}
 \begin{enumerate}
     \item Bestimmen Sie jeweils die Funktionen $f \circ g$ und $g \circ f$
@@ -754,7 +758,7 @@ Wird eine Funktion mit sich selbst komponiert, so spricht man von einer Iteratio
               \item $k(x) = 2x-1$. Was ist dann $k^n(0)$?
           \end{enumerate}
 \end{enumerate}
-\newpage 
+\newpage
 
 \subsubsection{Lösungen}
 \begin{enumerate}
